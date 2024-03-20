@@ -17,8 +17,6 @@ mioId.innerHTML = numeriCasuali
 
 // Da lì parte un timer di 5 secondi.
 setTimeout(function() {
-    // Rimuovi i numeri generati
-    numeriCasuali.length = 0;
     mioId.innerHTML = ""; // Rimuovi il contenuto HTML
 }, 5000); // timer 5 sec
 
