@@ -20,27 +20,34 @@ setTimeout(function() {
 }, 5000); // timer 5 sec
 
  // Funzione per controllare i numeri inseriti dall'utente
- 
-function controlla() {
-    const numeri = [];
-    // Recupera i numeri inseriti dall'utente
-    numeri.push(parseInt(document.getElementById('numero1').value));
-    numeri.push(parseInt(document.getElementById('numero2').value));
-    numeri.push(parseInt(document.getElementById('numero3').value));
-    numeri.push(parseInt(document.getElementById('numero4').value));
-    numeri.push(parseInt(document.getElementById('numero5').value));
 
-    const numeriIndovinati = [];
-    // Confronta i numeri inseriti con i numeri casuali
-    for (let numero of numeri) {
-        if (numeriCasuali.includes(numero)) {
-            numeriIndovinati.push(numero);
+
+
+ setTimeout(controlla, 5000 )
+    function controlla() {
+        const numeri = [];
+        // Recupera i numeri inseriti dall'utente
+        numeri.push(parseInt(document.getElementById('numero1').value));
+        numeri.push(parseInt(document.getElementById('numero2').value));
+        numeri.push(parseInt(document.getElementById('numero3').value));
+        numeri.push(parseInt(document.getElementById('numero4').value));
+        numeri.push(parseInt(document.getElementById('numero5').value));
+    
+        const numeriIndovinati = [];
+        // Confronta i numeri inseriti con i numeri casuali
+        for (let numero of numeri) {
+            if (numeriCasuali.includes(numero)) {
+                numeriIndovinati.push(numero);
+            }
         }
+    
+         // Mostra un messaggio all'utente con i numeri indovinati
+        alert("Hai indovinato " + numeriIndovinati.length + " numeri: " + numeriIndovinati.join(", "));
     }
+ 
 
-     // Mostra un messaggio all'utente con i numeri indovinati
-    alert("Hai indovinato " + numeriIndovinati.length + " numeri: " + numeriIndovinati.join(", "));
-}
+
+ 
 
 
 
