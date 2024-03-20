@@ -51,7 +51,9 @@ setTimeout(function() {
         }
     
          // Mostra un messaggio all'utente con i numeri indovinati
-        alert("Hai indovinato " + numeriIndovinati.length + " numeri: " + numeriIndovinati.join(", "));
+         const MioRisultato = document.getElementById("risultato");
+         MioRisultato.innerHTML = ("Hai indovinato " + numeriIndovinati.length + " numeri: " + numeriIndovinati.join(", "));
+        
     }
  
 
