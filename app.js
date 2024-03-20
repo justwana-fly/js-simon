@@ -19,11 +19,20 @@ setTimeout(function() {
     mioId.innerHTML = ""; // Rimuovi il contenuto HTML
 }, 5000); // timer 5 sec
 
+
+setTimeout(function() {
+    const inputContainer = document.getElementById("input-container");
+    inputContainer.innerHTML = `
+        <input type="text" id="numero1" class="numero-input" placeholder="Inserisci il primo numero">
+        <input type="text" id="numero2" class="numero-input" placeholder="Inserisci il secondo numero">
+        <input type="text" id="numero3" class="numero-input" placeholder="Inserisci il terzo numero">
+        <input type="text" id="numero4" class="numero-input" placeholder="Inserisci il quarto numero">
+        <input type="text" id="numero5" class="numero-input" placeholder="Inserisci il quinto numero">
+        <button onclick="controlla()">Controlla</button>
+    `;
+}, 5000);
+
  // Funzione per controllare i numeri inseriti dall'utente
-
-
-
- setTimeout(controlla, 5000 )
     function controlla() {
         const numeri = [];
         // Recupera i numeri inseriti dall'utente
