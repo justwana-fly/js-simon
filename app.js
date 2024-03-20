@@ -11,7 +11,6 @@ function generaNumeriCasuali() {
 }
 
 const numeriCasuali = generaNumeriCasuali();
-
 const mioId = document.getElementById("output")
 mioId.innerHTML = numeriCasuali
 
@@ -20,10 +19,29 @@ setTimeout(function() {
     mioId.innerHTML = ""; // Rimuovi il contenuto HTML
 }, 5000); // timer 5 sec
 
+ // Funzione per controllare i numeri inseriti dall'utente
+ 
+function controlla() {
+    const numeri = [];
+    // Recupera i numeri inseriti dall'utente
+    numeri.push(parseInt(document.getElementById('numero1').value));
+    numeri.push(parseInt(document.getElementById('numero2').value));
+    numeri.push(parseInt(document.getElementById('numero3').value));
+    numeri.push(parseInt(document.getElementById('numero4').value));
+    numeri.push(parseInt(document.getElementById('numero5').value));
 
-// Dopo i 30 secondi i numeri scompaiono e l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt() ( o meglio caselle di input).
+    const numeriIndovinati = [];
+    // Confronta i numeri inseriti con i numeri casuali
+    for (let numero of numeri) {
+        if (numeriCasuali.includes(numero)) {
+            numeriIndovinati.push(numero);
+        }
+    }
 
-// Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+     // Mostra un messaggio all'utente con i numeri indovinati
+    alert("Hai indovinato " + numeriIndovinati.length + " numeri: " + numeriIndovinati.join(", "));
+}
+
 
 
 
